@@ -1,0 +1,8 @@
+2025-11-26 13:52:09 | llm_call             | query_understanding/gpt-4o-mini |  3352.32ms | status=success | prompt_tokens=189 | completion_tokens=64 | total_tokens=253
+2025-11-26 13:52:09 | entity_extraction    | query_understanding       |  3352.32ms | status=success | num_entities=2
+2025-11-26 13:52:11 | retrieval            | hybrid                    |  1214.59ms | status=success | num_documents=17
+2025-11-26 13:52:17 | llm_call             | response_generation/gpt-4o-mini |  6600.06ms | status=success | prompt_tokens=439 | completion_tokens=371 | total_tokens=810
+2025-11-26 14:29:19 | llm_call             | query_understanding/gpt-4o-mini |  3554.56ms | status=success | prompt_tokens=189 | completion_tokens=64 | total_tokens=253
+2025-11-26 14:29:19 | entity_extraction    | query_understanding       |  3562.63ms | status=success | num_entities=2
+2025-11-26 14:29:22 | retrieval            | hybrid                    |  2460.14ms | status=success | num_documents=17
+2025-11-26 14:29:28 | llm_call             | response_generation/gpt-4o-mini |  5945.19ms | status=success | prompt_tokens=439 | completion_tokens=333 | total_tokens=772

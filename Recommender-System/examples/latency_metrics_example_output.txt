@@ -1,0 +1,116 @@
+# Example Output: Latency Metrics
+
+## Example 1: Recent Metrics (python view_metrics.py)
+
+=== Latest 10 Latency Metrics ===
+Timestamp           | Metric Type          | Component                  | Duration    | Details
+------------------------------------------------------------------------------------------------------------------------
+2024-11-26 10:30:42 | entity_extraction    | query_understanding        |   145.23ms | status=success | num_entities=4
+2024-11-26 10:30:42 | llm_call             | query_understanding/gpt-4  |  1456.78ms | status=success | prompt_tokens=180 | completion_tokens=85 | total_tokens=265
+2024-11-26 10:30:43 | retrieval            | hybrid                     |   267.45ms | status=success | num_documents=10
+2024-11-26 10:30:44 | llm_call             | response_generation/gpt-4  |  1823.56ms | status=success | prompt_tokens=350 | completion_tokens=200 | total_tokens=550
+2024-11-26 10:31:15 | entity_extraction    | query_understanding        |   123.45ms | status=success | num_entities=2
+2024-11-26 10:31:16 | llm_call             | query_understanding/gpt-4  |  1234.56ms | status=success | prompt_tokens=150 | completion_tokens=75 | total_tokens=225
+2024-11-26 10:31:17 | retrieval            | hybrid                     |   189.34ms | status=success | num_documents=8
+2024-11-26 10:31:18 | llm_call             | response_generation/gpt-4  |  1567.89ms | status=success | prompt_tokens=280 | completion_tokens=150 | total_tokens=430
+2024-11-26 10:32:05 | retrieval            | hybrid                     |   345.67ms | status=success | num_documents=12
+2024-11-26 10:32:05 | llm_call             | query_understanding/gpt-4  |  1890.12ms | status=success | prompt_tokens=200 | completion_tokens=100 | total_tokens=300
+
+
+## Example 2: Summary Statistics (python view_metrics.py --summary)
+
+=== Latency Metrics Summary ===
+
+Metric Type                  Count    Avg (ms)     Min (ms)     Max (ms)  Latest (ms)
+------------------------------------------------------------------------------------------
+entity_extraction              125      135.42        89.23       456.78       123.45
+llm_call                       250     1523.67       892.34      3245.89      1890.12
+retrieval                      125      234.56       123.45       567.89       345.67
+
+
+## Example 3: Via API (curl http://localhost:8080/latency/recent?num_lines=5)
+
+=== Latest 5 Latency Metrics ===
+Timestamp           | Metric Type          | Component                  | Duration    | Details
+------------------------------------------------------------------------------------------------------------------------
+2024-11-26 10:31:15 | entity_extraction    | query_understanding        |   123.45ms | status=success | num_entities=2
+2024-11-26 10:31:16 | llm_call             | query_understanding/gpt-4  |  1234.56ms | status=success | prompt_tokens=150 | completion_tokens=75 | total_tokens=225
+2024-11-26 10:31:17 | retrieval            | hybrid                     |   189.34ms | status=success | num_documents=8
+2024-11-26 10:31:18 | llm_call             | response_generation/gpt-4  |  1567.89ms | status=success | prompt_tokens=280 | completion_tokens=150 | total_tokens=430
+2024-11-26 10:32:05 | retrieval            | hybrid                     |   345.67ms | status=success | num_documents=12
+
+
+## Example 4: API Summary (curl http://localhost:8080/latency/summary)
+
+{
+  "entity_extraction": {
+    "count": 125,
+    "avg_ms": 135.42,
+    "min_ms": 89.23,
+    "max_ms": 456.78,
+    "latest_ms": 123.45
+  },
+  "llm_call": {
+    "count": 250,
+    "avg_ms": 1523.67,
+    "min_ms": 892.34,
+    "max_ms": 3245.89,
+    "latest_ms": 1890.12
+  },
+  "retrieval": {
+    "count": 125,
+    "avg_ms": 234.56,
+    "min_ms": 123.45,
+    "max_ms": 567.89,
+    "latest_ms": 345.67
+  }
+}
+
+
+## Example 5: Real-time Monitoring (tail -f logs/latency_metrics.log)
+
+2024-11-26 10:35:42 | entity_extraction    | query_understanding        |   156.78ms | status=success | num_entities=3
+2024-11-26 10:35:43 | llm_call             | query_understanding/gpt-4  |  1345.67ms | status=success | prompt_tokens=165 | completion_tokens=80 | total_tokens=245
+2024-11-26 10:35:44 | retrieval            | hybrid                     |   223.45ms | status=success | num_documents=9
+2024-11-26 10:35:45 | llm_call             | response_generation/gpt-4  |  1678.90ms | status=success | prompt_tokens=310 | completion_tokens=170 | total_tokens=480
+... (continues as new requests come in)
+
+
+## Example 6: Error Tracking
+
+2024-11-26 10:36:15 | llm_call             | query_understanding/gpt-4  |   567.89ms | status=error | prompt_tokens=0 | completion_tokens=0 | total_tokens=None
+2024-11-26 10:36:16 | retrieval            | hybrid                     |   234.56ms | status=error | num_documents=0
+
+
+## Example 7: Performance Analysis
+
+# View last 100 entries to identify trends
+python view_metrics.py --lines 100
+
+# Check if LLM calls are consistently slow
+python view_metrics.py --lines 100 | grep "llm_call"
+
+# Monitor retrieval performance
+python view_metrics.py --lines 100 | grep "retrieval"
+
+# Get overall statistics
+python view_metrics.py --summary
+
+
+## What to Look For
+
+### Good Performance:
+entity_extraction       100      125.50        45.20       300.00       110.30
+llm_call                200     1250.75       800.00      2000.00      1180.50
+retrieval               100      125.30        45.10       250.00       110.50
+
+### Needs Attention:
+entity_extraction       100      456.78       300.00       800.00       567.89
+llm_call                200     2345.67      1500.00     4000.00      2890.12
+retrieval               100      456.78       300.00       800.00       567.89
+
+### Performance Issue:
+entity_extraction       100      789.12       500.00      1500.00      890.45
+llm_call                200     4567.89      3000.00     8000.00      5234.56
+retrieval               100      890.12       600.00      1500.00      950.67
+

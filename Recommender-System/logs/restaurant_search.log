@@ -1,0 +1,97 @@
+2025-11-25 19:24:41,698 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-25 19:24:42,277 - src.rag_system - INFO - RAG System initialized
+2025-11-25 19:24:42,280 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-25 19:24:42,280 - src.rag_system - INFO - Created 50 documents
+2025-11-25 19:24:42,281 - src.rag_system - INFO - Building new vector store...
+2025-11-25 19:24:45,869 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-25 19:24:52,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:24:52,840 - src.rag_system - INFO - Vector store built with 50 documents
+2025-11-25 19:24:52,853 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-25 19:24:52,854 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-25 19:24:53,921 - src.agents - INFO - Agent workflow initialized
+2025-11-25 19:24:53,921 - __main__ - INFO - System initialization complete
+2025-11-25 19:26:10,752 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:10,753 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:10,761 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:14,017 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:26:14,035 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:26:14,036 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:26:14,662 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:14,741 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:26:16,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:17,219 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:17,225 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:26:17,227 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:26:34,498 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:33:29,666 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:29,667 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:29,671 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:32,779 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:33:32,782 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:33:32,785 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:33:33,310 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:33,316 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:33:34,751 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:35,216 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:35,222 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:33:35,223 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:33:51,450 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:36:30,529 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:30,531 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:30,539 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:34,864 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:36:34,876 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:36:34,880 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:36:35,445 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:35,455 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:36:36,725 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:38,383 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:38,400 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:36:38,403 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:36:54,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 23:10:08,596 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-25 23:10:09,145 - src.rag_system - INFO - RAG System initialized
+2025-11-25 23:10:09,155 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-25 23:10:09,156 - src.rag_system - INFO - Created 50 documents
+2025-11-25 23:10:09,157 - src.rag_system - INFO - Loading existing vector store...
+2025-11-25 23:10:12,122 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-25 23:10:12,368 - src.rag_system - INFO - Vector store loaded from disk
+2025-11-25 23:10:12,447 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-25 23:10:12,447 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-25 23:10:12,961 - src.agents - INFO - Agent workflow initialized
+2025-11-25 23:10:12,961 - __main__ - INFO - System initialization complete
+2025-11-25 23:10:44,437 - __main__ - INFO - Processing query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:44,439 - src.agents - INFO - Processing query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:44,446 - src.agents - INFO - Extracting entities from query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:47,165 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 23:10:47,182 - src.agents - INFO - Extracted entities: {'cuisine': 'French', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 23:10:47,185 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'French', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 23:10:48,998 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 23:10:49,127 - src.agents - INFO - Results FROM HYBRID SEARCH: [(Document(metadata={'coordinates': '25.002863, 55.461075', 'attributes': 'Business Lunch', 'id': 14, 'amenities': 'Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music', 'price_range': 'AED 100 - 150', 'review_count': 777, 'cuisine': 'French', 'name': 'Central French Spot', 'location': 'Business Bay', 'rating': 3.22}, page_content='Restaurant: Central French Spot\nCuisine: French\nLocation: Business Bay\nPrice Range: AED 100 - 150\nRating: 3.22/5.0 (777 reviews)\nDescription: A beautifully designed space with natural wood and traditional lighting providing a vibrant and energetic setting. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **deeply comforting Beef Wellington**, is with a port wine reduction and truffle mash. We pride ourselves on bringing the true essence of **French cuisine** to Dubai.\nAmenities: Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music\nAttributes: Business Lunch\nHours: 9:00 - 22:00'), 1.2103676811505617), (Document(metadata={'rating': 3.15, 'review_count': 246, 'attributes': 'Late-Night, Vegetarian-Focused, Best Views', 'coordinates': '24.869259, 55.497432', 'id': 3, 'name': 'Desert Palace', 'price_range': 'AED 50 - 100', 'location': 'Downtown Dubai', 'cuisine': 'French', 'amenities': 'Free WiFi'}, page_content='Restaurant: Desert Palace\nCuisine: French\nLocation: Downtown Dubai\nPrice Range: AED 50 - 100\nRating: 3.15/5.0 (246 reviews)\nDescription: A beautifully designed space with floor-to-ceiling glass panels and minimalist decor creating a refined and exclusive atmosphere. The terrace boasts sweeping, spectacular views over the **Downtown Dubai skyline**. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **rustic and rich Tarte Tatin**, is baked in garlic-herb butter. We pride ourselves on bringing the true essence of **French cuisine** to Dubai. Offers a tranquil retreat from the city hustle, suitable for families.\nAmenities: Free WiFi\nAttributes: Late-Night, Vegetarian-Focused, Best Views\nHours: 11:00 - 22:00'), 0.9944206860541333)]
+2025-11-25 23:10:49,132 - src.agents - INFO - Retrieved 2 restaurants
+2025-11-25 23:10:49,136 - src.agents - INFO - Generating response for 2 restaurants
+2025-11-25 23:10:58,663 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 00:00:33,786 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2025-11-26 00:00:33,788 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2025-11-26 00:00:33,790 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-26 00:00:34,691 - src.rag_system - INFO - RAG System initialized
+2025-11-26 00:00:34,701 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-26 00:00:34,703 - src.rag_system - INFO - Created 50 documents
+2025-11-26 00:00:34,705 - src.rag_system - INFO - Loading existing vector store...
+2025-11-26 00:00:39,031 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-26 00:00:39,466 - src.rag_system - INFO - Vector store loaded from disk
+2025-11-26 00:00:39,644 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-26 00:00:39,645 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-26 00:00:40,303 - src.agents - INFO - Agent workflow initialized
+2025-11-26 00:00:40,303 - __main__ - INFO - System initialization complete
+2025-11-26 00:01:09,365 - __main__ - INFO - Processing query: find me french restaurants in downtown
+2025-11-26 00:01:09,367 - src.agents - INFO - Processing query: find me french restaurants in downtown
+2025-11-26 00:01:09,383 - src.agents - INFO - Extracting entities from query: find me french restaurants in downtown
+2025-11-26 00:01:11,707 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 00:01:11,751 - src.agents - INFO - Extracted entities: {'cuisine': 'French', 'location': 'Downtown', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-26 00:01:11,754 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'French', 'location': 'Downtown', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-26 00:01:13,011 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-26 00:01:13,180 - src.agents - INFO - Results FROM HYBRID SEARCH: [(Document(metadata={'coordinates': '24.869259, 55.497432', 'name': 'Desert Palace', 'cuisine': 'French', 'attributes': 'Late-Night, Vegetarian-Focused, Best Views', 'review_count': 246, 'location': 'Downtown Dubai', 'id': 3, 'amenities': 'Free WiFi', 'price_range': 'AED 50 - 100', 'rating': 3.15}, page_content='Restaurant: Desert Palace\nCuisine: French\nLocation: Downtown Dubai\nPrice Range: AED 50 - 100\nRating: 3.15/5.0 (246 reviews)\nDescription: A beautifully designed space with floor-to-ceiling glass panels and minimalist decor creating a refined and exclusive atmosphere. The terrace boasts sweeping, spectacular views over the **Downtown Dubai skyline**. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **rustic and rich Tarte Tatin**, is baked in garlic-herb butter. We pride ourselves on bringing the true essence of **French cuisine** to Dubai. Offers a tranquil retreat from the city hustle, suitable for families.\nAmenities: Free WiFi\nAttributes: Late-Night, Vegetarian-Focused, Best Views\nHours: 11:00 - 22:00'), 1.19330482326496), (Document(metadata={'amenities': 'Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music', 'coordinates': '25.002863, 55.461075', 'attributes': 'Business Lunch', 'name': 'Central French Spot', 'location': 'Business Bay', 'review_count': 777, 'id': 14, 'rating': 3.22, 'price_range': 'AED 100 - 150', 'cuisine': 'French'}, page_content='Restaurant: Central French Spot\nCuisine: French\nLocation: Business Bay\nPrice Range: AED 100 - 150\nRating: 3.22/5.0 (777 reviews)\nDescription: A beautifully designed space with natural wood and traditional lighting providing a vibrant and energetic setting. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **deeply comforting Beef Wellington**, is with a port wine reduction and truffle mash. We pride ourselves on bringing the true essence of **French cuisine** to Dubai.\nAmenities: Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music\nAttributes: Business Lunch\nHours: 9:00 - 22:00'), 1.008639734292135)]
+2025-11-26 00:01:13,183 - src.agents - INFO - Retrieved 2 restaurants
+2025-11-26 00:01:13,185 - src.agents - INFO - Generating response for 2 restaurants
+2025-11-26 00:01:22,617 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
