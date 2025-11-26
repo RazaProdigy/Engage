@@ -1,0 +1,28 @@
+# Testing dependencies for Restaurant Rating Prediction API
+
+# Core testing framework
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-xdist==3.5.0  # For parallel test execution
+
+# FastAPI testing
+httpx==0.25.2  # Required by FastAPI TestClient
+fastapi==0.104.1
+
+# HTTP request libraries for manual testing
+requests==2.31.0
+
+# Code quality and formatting (optional)
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Main application dependencies (ensure compatibility)
+uvicorn==0.24.0
+pydantic==2.5.0
+joblib==1.3.2
+pandas==2.1.3
+numpy==1.26.2
+scikit-learn==1.6.1
+xgboost==2.0.2
+

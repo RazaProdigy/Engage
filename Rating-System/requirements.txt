@@ -1,0 +1,18 @@
+# Main dependencies for Restaurant Rating Prediction API
+
+# Web framework
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Data processing
+pandas==2.1.3
+numpy==1.26.2
+
+# Model and ML
+scikit-learn==1.6.1
+xgboost==2.0.2
+joblib==1.3.2
+
+# Data validation
+pydantic==2.5.0
+
