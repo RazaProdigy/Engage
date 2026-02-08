@@ -1,0 +1,273 @@
+2025-11-25 19:24:41,698 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-25 19:24:42,277 - src.rag_system - INFO - RAG System initialized
+2025-11-25 19:24:42,280 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-25 19:24:42,280 - src.rag_system - INFO - Created 50 documents
+2025-11-25 19:24:42,281 - src.rag_system - INFO - Building new vector store...
+2025-11-25 19:24:45,869 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-25 19:24:52,104 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:24:52,840 - src.rag_system - INFO - Vector store built with 50 documents
+2025-11-25 19:24:52,853 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-25 19:24:52,854 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-25 19:24:53,921 - src.agents - INFO - Agent workflow initialized
+2025-11-25 19:24:53,921 - __main__ - INFO - System initialization complete
+2025-11-25 19:26:10,752 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:10,753 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:10,761 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:26:14,017 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:26:14,035 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:26:14,036 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:26:14,662 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:14,741 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:26:16,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:17,219 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:26:17,225 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:26:17,227 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:26:34,498 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:33:29,666 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:29,667 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:29,671 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:33:32,779 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:33:32,782 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:33:32,785 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:33:33,310 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:33,316 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:33:34,751 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:35,216 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:33:35,222 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:33:35,223 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:33:51,450 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:36:30,529 - __main__ - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:30,531 - src.agents - INFO - Processing query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:30,539 - src.agents - INFO - Extracting entities from query: find Italian restaurants in Downtown Dubai with outdoor seating
+2025-11-25 19:36:34,864 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 19:36:34,876 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:36:34,880 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 19:36:35,445 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:35,455 - src.agents - WARNING - No results found, trying relaxed search
+2025-11-25 19:36:36,725 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:38,383 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 19:36:38,400 - src.agents - INFO - Retrieved 3 restaurants
+2025-11-25 19:36:38,403 - src.agents - INFO - Generating response for 3 restaurants
+2025-11-25 19:36:54,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 23:10:08,596 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-25 23:10:09,145 - src.rag_system - INFO - RAG System initialized
+2025-11-25 23:10:09,155 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-25 23:10:09,156 - src.rag_system - INFO - Created 50 documents
+2025-11-25 23:10:09,157 - src.rag_system - INFO - Loading existing vector store...
+2025-11-25 23:10:12,122 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-25 23:10:12,368 - src.rag_system - INFO - Vector store loaded from disk
+2025-11-25 23:10:12,447 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-25 23:10:12,447 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-25 23:10:12,961 - src.agents - INFO - Agent workflow initialized
+2025-11-25 23:10:12,961 - __main__ - INFO - System initialization complete
+2025-11-25 23:10:44,437 - __main__ - INFO - Processing query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:44,439 - src.agents - INFO - Processing query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:44,446 - src.agents - INFO - Extracting entities from query: find me restaurants with french food in downtown dubai
+2025-11-25 23:10:47,165 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-25 23:10:47,182 - src.agents - INFO - Extracted entities: {'cuisine': 'French', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 23:10:47,185 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'French', 'location': 'Downtown Dubai', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-25 23:10:48,998 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-25 23:10:49,127 - src.agents - INFO - Results FROM HYBRID SEARCH: [(Document(metadata={'coordinates': '25.002863, 55.461075', 'attributes': 'Business Lunch', 'id': 14, 'amenities': 'Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music', 'price_range': 'AED 100 - 150', 'review_count': 777, 'cuisine': 'French', 'name': 'Central French Spot', 'location': 'Business Bay', 'rating': 3.22}, page_content='Restaurant: Central French Spot\nCuisine: French\nLocation: Business Bay\nPrice Range: AED 100 - 150\nRating: 3.22/5.0 (777 reviews)\nDescription: A beautifully designed space with natural wood and traditional lighting providing a vibrant and energetic setting. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **deeply comforting Beef Wellington**, is with a port wine reduction and truffle mash. We pride ourselves on bringing the true essence of **French cuisine** to Dubai.\nAmenities: Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music\nAttributes: Business Lunch\nHours: 9:00 - 22:00'), 1.2103676811505617), (Document(metadata={'rating': 3.15, 'review_count': 246, 'attributes': 'Late-Night, Vegetarian-Focused, Best Views', 'coordinates': '24.869259, 55.497432', 'id': 3, 'name': 'Desert Palace', 'price_range': 'AED 50 - 100', 'location': 'Downtown Dubai', 'cuisine': 'French', 'amenities': 'Free WiFi'}, page_content='Restaurant: Desert Palace\nCuisine: French\nLocation: Downtown Dubai\nPrice Range: AED 50 - 100\nRating: 3.15/5.0 (246 reviews)\nDescription: A beautifully designed space with floor-to-ceiling glass panels and minimalist decor creating a refined and exclusive atmosphere. The terrace boasts sweeping, spectacular views over the **Downtown Dubai skyline**. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **rustic and rich Tarte Tatin**, is baked in garlic-herb butter. We pride ourselves on bringing the true essence of **French cuisine** to Dubai. Offers a tranquil retreat from the city hustle, suitable for families.\nAmenities: Free WiFi\nAttributes: Late-Night, Vegetarian-Focused, Best Views\nHours: 11:00 - 22:00'), 0.9944206860541333)]
+2025-11-25 23:10:49,132 - src.agents - INFO - Retrieved 2 restaurants
+2025-11-25 23:10:49,136 - src.agents - INFO - Generating response for 2 restaurants
+2025-11-25 23:10:58,663 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 00:00:33,786 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2025-11-26 00:00:33,788 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2025-11-26 00:00:33,790 - __main__ - INFO - Initializing Restaurant Search System...
+2025-11-26 00:00:34,691 - src.rag_system - INFO - RAG System initialized
+2025-11-26 00:00:34,701 - src.rag_system - INFO - Loaded 50 restaurants
+2025-11-26 00:00:34,703 - src.rag_system - INFO - Created 50 documents
+2025-11-26 00:00:34,705 - src.rag_system - INFO - Loading existing vector store...
+2025-11-26 00:00:39,031 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-26 00:00:39,466 - src.rag_system - INFO - Vector store loaded from disk
+2025-11-26 00:00:39,644 - src.rag_system - INFO - Hybrid retriever setup complete
+2025-11-26 00:00:39,645 - src.rag_system - INFO - RAG pipeline initialized successfully
+2025-11-26 00:00:40,303 - src.agents - INFO - Agent workflow initialized
+2025-11-26 00:00:40,303 - __main__ - INFO - System initialization complete
+2025-11-26 00:01:09,365 - __main__ - INFO - Processing query: find me french restaurants in downtown
+2025-11-26 00:01:09,367 - src.agents - INFO - Processing query: find me french restaurants in downtown
+2025-11-26 00:01:09,383 - src.agents - INFO - Extracting entities from query: find me french restaurants in downtown
+2025-11-26 00:01:11,707 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-26 00:01:11,751 - src.agents - INFO - Extracted entities: {'cuisine': 'French', 'location': 'Downtown', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-26 00:01:11,754 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'French', 'location': 'Downtown', 'price_range': None, 'amenities': None, 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2025-11-26 00:01:13,011 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-11-26 00:01:13,180 - src.agents - INFO - Results FROM HYBRID SEARCH: [(Document(metadata={'coordinates': '24.869259, 55.497432', 'name': 'Desert Palace', 'cuisine': 'French', 'attributes': 'Late-Night, Vegetarian-Focused, Best Views', 'review_count': 246, 'location': 'Downtown Dubai', 'id': 3, 'amenities': 'Free WiFi', 'price_range': 'AED 50 - 100', 'rating': 3.15}, page_content='Restaurant: Desert Palace\nCuisine: French\nLocation: Downtown Dubai\nPrice Range: AED 50 - 100\nRating: 3.15/5.0 (246 reviews)\nDescription: A beautifully designed space with floor-to-ceiling glass panels and minimalist decor creating a refined and exclusive atmosphere. The terrace boasts sweeping, spectacular views over the **Downtown Dubai skyline**. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **rustic and rich Tarte Tatin**, is baked in garlic-herb butter. We pride ourselves on bringing the true essence of **French cuisine** to Dubai. Offers a tranquil retreat from the city hustle, suitable for families.\nAmenities: Free WiFi\nAttributes: Late-Night, Vegetarian-Focused, Best Views\nHours: 11:00 - 22:00'), 1.19330482326496), (Document(metadata={'amenities': 'Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music', 'coordinates': '25.002863, 55.461075', 'attributes': 'Business Lunch', 'name': 'Central French Spot', 'location': 'Business Bay', 'review_count': 777, 'id': 14, 'rating': 3.22, 'price_range': 'AED 100 - 150', 'cuisine': 'French'}, page_content='Restaurant: Central French Spot\nCuisine: French\nLocation: Business Bay\nPrice Range: AED 100 - 150\nRating: 3.22/5.0 (777 reviews)\nDescription: A beautifully designed space with natural wood and traditional lighting providing a vibrant and energetic setting. Our culinary philosophy is rooted in authenticity, using only imported or the freshest local ingredients. Our signature dish, the **deeply comforting Beef Wellington**, is with a port wine reduction and truffle mash. We pride ourselves on bringing the true essence of **French cuisine** to Dubai.\nAmenities: Wheelchair Accessible, Delivery Available, Reservations Recommended, Live Music\nAttributes: Business Lunch\nHours: 9:00 - 22:00'), 1.008639734292135)]
+2025-11-26 00:01:13,183 - src.agents - INFO - Retrieved 2 restaurants
+2025-11-26 00:01:13,185 - src.agents - INFO - Generating response for 2 restaurants
+2025-11-26 00:01:22,617 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:09:28,392 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2026-02-08 14:09:28,394 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2026-02-08 14:09:28,395 - __main__ - INFO - Initializing Restaurant Search System...
+2026-02-08 14:09:29,910 - src.rag_system - INFO - RAG System initialized
+2026-02-08 14:09:29,941 - src.rag_system - INFO - Loaded 50 restaurants
+2026-02-08 14:09:29,944 - src.rag_system - INFO - Created 50 documents
+2026-02-08 14:09:29,945 - src.rag_system - INFO - Loading existing vector store...
+2026-02-08 14:09:33,895 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-08 14:09:34,382 - src.rag_system - INFO - Vector store loaded from disk
+2026-02-08 14:09:34,538 - src.rag_system - INFO - Hybrid retriever setup complete
+2026-02-08 14:09:34,538 - src.rag_system - INFO - RAG pipeline initialized successfully
+2026-02-08 14:09:35,062 - src.agents - INFO - Agent workflow initialized
+2026-02-08 14:09:35,062 - __main__ - INFO - System initialization complete
+2026-02-08 14:09:35,062 - __main__ - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:09:35,063 - src.agents - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:09:35,068 - src.agents - INFO - Extracting entities from query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:09:35,950 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:35,952 - openai._base_client - INFO - Retrying request to /chat/completions in 0.442270 seconds
+2026-02-08 14:09:37,185 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:37,188 - openai._base_client - INFO - Retrying request to /chat/completions in 0.816623 seconds
+2026-02-08 14:09:38,791 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:38,798 - src.agents - ERROR - Error extracting entities: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-02-08 14:09:38,808 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'downtown', 'amenities': ['outdoor seating']}
+2026-02-08 14:09:38,811 - src.agents - ERROR - Error retrieving restaurants: 'EnsembleRetriever' object has no attribute 'get_relevant_documents'
+2026-02-08 14:09:38,815 - src.agents - INFO - Generating response for 0 restaurants
+2026-02-08 14:09:39,597 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:39,599 - openai._base_client - INFO - Retrying request to /chat/completions in 0.413154 seconds
+2026-02-08 14:09:40,275 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:40,278 - openai._base_client - INFO - Retrying request to /chat/completions in 0.846154 seconds
+2026-02-08 14:09:41,389 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-02-08 14:09:41,393 - src.agents - ERROR - Error generating response: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-02-08 14:16:02,530 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2026-02-08 14:16:02,531 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2026-02-08 14:16:02,531 - __main__ - INFO - Initializing Restaurant Search System...
+2026-02-08 14:16:03,468 - src.rag_system - INFO - RAG System initialized
+2026-02-08 14:16:03,469 - src.rag_system - INFO - Loaded 50 restaurants
+2026-02-08 14:16:03,470 - src.rag_system - INFO - Created 50 documents
+2026-02-08 14:16:03,470 - src.rag_system - INFO - Loading existing vector store...
+2026-02-08 14:16:06,424 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-08 14:16:06,584 - src.rag_system - INFO - Vector store loaded from disk
+2026-02-08 14:16:06,664 - src.rag_system - INFO - Hybrid retriever setup complete
+2026-02-08 14:16:06,665 - src.rag_system - INFO - RAG pipeline initialized successfully
+2026-02-08 14:16:07,174 - src.agents - INFO - Agent workflow initialized
+2026-02-08 14:16:07,174 - __main__ - INFO - System initialization complete
+2026-02-08 14:16:07,174 - __main__ - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:16:07,175 - src.agents - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:16:07,176 - src.agents - INFO - Extracting entities from query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:16:08,653 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:16:08,711 - src.agents - ERROR - Error extracting entities: 'dict' object has no attribute 'lower'
+2026-02-08 14:16:08,714 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'downtown', 'amenities': ['outdoor seating']}
+2026-02-08 14:16:08,715 - src.agents - ERROR - Error retrieving restaurants: 'EnsembleRetriever' object has no attribute 'get_relevant_documents'
+2026-02-08 14:16:08,717 - src.agents - INFO - Generating response for 0 restaurants
+2026-02-08 14:16:12,419 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:20:21,961 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2026-02-08 14:20:21,962 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2026-02-08 14:20:21,962 - __main__ - INFO - Initializing Restaurant Search System...
+2026-02-08 14:20:24,991 - src.rag_system - INFO - RAG System initialized
+2026-02-08 14:20:24,992 - src.rag_system - INFO - Loaded 50 restaurants
+2026-02-08 14:20:24,993 - src.rag_system - INFO - Created 50 documents
+2026-02-08 14:20:24,993 - src.rag_system - INFO - Loading existing vector store...
+2026-02-08 14:20:28,179 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-08 14:20:28,341 - src.rag_system - INFO - Vector store loaded from disk
+2026-02-08 14:20:28,422 - src.rag_system - INFO - Hybrid retriever setup complete
+2026-02-08 14:20:28,422 - src.rag_system - INFO - RAG pipeline initialized successfully
+2026-02-08 14:20:28,967 - src.agents - INFO - Agent workflow initialized
+2026-02-08 14:20:28,968 - __main__ - INFO - System initialization complete
+2026-02-08 14:20:28,968 - __main__ - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:20:28,968 - src.agents - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:20:28,970 - src.agents - INFO - Extracting entities from query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:20:30,248 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:20:30,261 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 14:20:30,263 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 14:20:48,137 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:20:48,276 - src.agents - INFO - Results FROM HYBRID SEARCH: []
+2026-02-08 14:20:48,277 - src.agents - WARNING - No results found, trying relaxed search
+2026-02-08 14:20:49,416 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:20:50,973 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:20:51,003 - src.agents - INFO - Retrieved 3 restaurants
+2026-02-08 14:20:51,005 - src.agents - INFO - Generating response for 3 restaurants
+2026-02-08 14:20:54,992 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:38:14,421 - src.langsmith_tracing - INFO - LangSmith tracing is disabled (no API key or tracing disabled)
+2026-02-08 14:38:14,422 - __main__ - INFO - LangSmith tracing disabled (no API key configured)
+2026-02-08 14:38:15,277 - __main__ - INFO - Metrics server started on http://0.0.0.0:8000
+2026-02-08 14:38:15,277 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2026-02-08 14:38:15,278 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2026-02-08 14:38:15,278 - __main__ - INFO - Initializing Restaurant Search System...
+2026-02-08 14:38:16,485 - src.rag_system - INFO - RAG System initialized
+2026-02-08 14:38:16,489 - src.rag_system - INFO - Loaded 50 restaurants
+2026-02-08 14:38:16,489 - src.rag_system - INFO - Created 50 documents
+2026-02-08 14:38:16,490 - src.rag_system - INFO - Loading existing vector store...
+2026-02-08 14:38:20,098 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-08 14:38:20,370 - src.rag_system - INFO - Vector store loaded from disk
+2026-02-08 14:38:20,452 - src.rag_system - INFO - Hybrid retriever setup complete
+2026-02-08 14:38:20,452 - src.rag_system - INFO - RAG pipeline initialized successfully
+2026-02-08 14:38:20,983 - src.agents - INFO - Agent workflow initialized
+2026-02-08 14:38:20,984 - __main__ - INFO - System initialization complete
+2026-02-08 14:38:20,984 - __main__ - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:38:20,984 - src.agents - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:38:20,989 - src.agents - INFO - Extracting entities from query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 14:38:22,407 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 14:38:22,441 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 14:38:22,443 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 14:38:23,433 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:38:23,493 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 14:38:23,495 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - location mismatch: Abu Dhabi != Downtown Dubai
+2026-02-08 14:38:23,495 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 14:38:23,496 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 14:38:23,496 - src.agents - INFO - Results FROM HYBRID SEARCH: []
+2026-02-08 14:38:23,496 - src.agents - WARNING - No results found, trying relaxed search
+2026-02-08 14:38:23,873 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:38:23,895 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2026-02-08 14:38:23,898 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - location mismatch: Abu Dhabi != Downtown Dubai
+2026-02-08 14:38:23,900 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 14:38:23,902 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 14:38:25,163 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 14:38:25,187 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian'}
+2026-02-08 14:38:25,188 - src.agents - INFO - Retrieved 3 restaurants
+2026-02-08 14:38:25,190 - src.agents - INFO - Generating response for 3 restaurants
+2026-02-08 14:38:29,881 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 15:17:47,702 - src.langsmith_tracing - INFO - LangSmith tracing is disabled (no API key or tracing disabled)
+2026-02-08 15:17:47,703 - __main__ - INFO - LangSmith tracing disabled (no API key configured)
+2026-02-08 15:17:48,637 - __main__ - INFO - Metrics server started on http://0.0.0.0:8000
+2026-02-08 15:17:48,638 - __main__ - INFO -    - Metrics: http://localhost:8000/metrics
+2026-02-08 15:17:48,638 - __main__ - INFO -    - Health:  http://localhost:8000/health
+2026-02-08 15:17:48,639 - __main__ - INFO - Initializing Restaurant Search System...
+2026-02-08 15:17:49,630 - src.rag_system - INFO - RAG System initialized
+2026-02-08 15:17:49,631 - src.rag_system - INFO - Loaded 50 restaurants
+2026-02-08 15:17:49,632 - src.rag_system - INFO - Created 50 documents
+2026-02-08 15:17:49,632 - src.rag_system - INFO - Loading existing vector store...
+2026-02-08 15:17:52,914 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-02-08 15:17:53,045 - src.rag_system - INFO - Vector store loaded from disk
+2026-02-08 15:17:53,104 - src.rag_system - INFO - Hybrid retriever setup complete
+2026-02-08 15:17:53,105 - src.rag_system - INFO - RAG pipeline initialized successfully
+2026-02-08 15:17:53,675 - src.agents - INFO - Agent workflow initialized
+2026-02-08 15:17:53,675 - __main__ - INFO - System initialization complete
+2026-02-08 15:17:53,675 - __main__ - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 15:17:53,676 - src.agents - INFO - Processing query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 15:17:53,677 - src.agents - INFO - Extracting entities from query: Find Italian restaurants in Downtown Dubai with outdoor seating under AED 200
+2026-02-08 15:17:55,450 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-08 15:17:55,470 - src.agents - INFO - Extracted entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 15:17:55,472 - src.agents - INFO - Retrieving restaurants for entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 15:17:56,526 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 15:17:56,956 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None, 'price_min': None, 'price_max': 200}
+2026-02-08 15:17:56,957 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - location mismatch: Abu Dhabi != Downtown Dubai
+2026-02-08 15:17:56,959 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 15:17:56,960 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 15:17:56,960 - src.rag_system - INFO - No exact matches found, applying fallback logic
+2026-02-08 15:17:56,960 - src.rag_system - INFO - [FALLBACK] Applying fallback filters. Original location: Downtown Dubai
+2026-02-08 15:17:56,961 - src.rag_system - INFO - [NEARBY] The Italian Cafe in Abu Dhabi (nearby alternative)
+2026-02-08 15:17:56,962 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:56,967 - src.rag_system - INFO - [NEARBY] Classic Italian Spot in Sharjah (nearby alternative)
+2026-02-08 15:17:56,967 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:56,969 - src.rag_system - INFO - [NEARBY] Central Italian Eatery in Sharjah (nearby alternative)
+2026-02-08 15:17:56,970 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:56,971 - src.rag_system - INFO - [FALLBACK] Found 0 results with relaxed location constraint
+2026-02-08 15:17:56,971 - src.agents - INFO - Results FROM HYBRID SEARCH: {'results': [], 'fallback_applied': True, 'original_criteria': {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'amenities': ['outdoor seating'], 'price_range': (None, 200)}, 'fallback_message': 'No exact matches found for Italian restaurants in Downtown Dubai with outdoor seating. Showing nearby alternatives.'}
+2026-02-08 15:17:56,973 - src.agents - WARNING - No results found even with fallback, trying maximally relaxed search
+2026-02-08 15:17:57,914 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 15:17:57,923 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian', 'location': 'Downtown Dubai', 'price_range': {'min': None, 'max': 200}, 'amenities': ['outdoor seating'], 'attributes': None, 'dietary': None, 'ambiance': None, 'rating_min': None}
+2026-02-08 15:17:57,924 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - location mismatch: Abu Dhabi != Downtown Dubai
+2026-02-08 15:17:57,925 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 15:17:57,926 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - location mismatch: Sharjah != Downtown Dubai
+2026-02-08 15:17:57,926 - src.rag_system - INFO - No exact matches found, applying fallback logic
+2026-02-08 15:17:57,927 - src.rag_system - INFO - [FALLBACK] Applying fallback filters. Original location: Downtown Dubai
+2026-02-08 15:17:57,928 - src.rag_system - INFO - [NEARBY] The Italian Cafe in Abu Dhabi (nearby alternative)
+2026-02-08 15:17:57,928 - src.rag_system - INFO - [X] Filtered out The Italian Cafe - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:57,929 - src.rag_system - INFO - [NEARBY] Classic Italian Spot in Sharjah (nearby alternative)
+2026-02-08 15:17:57,929 - src.rag_system - INFO - [X] Filtered out Classic Italian Spot - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:57,930 - src.rag_system - INFO - [NEARBY] Central Italian Eatery in Sharjah (nearby alternative)
+2026-02-08 15:17:57,930 - src.rag_system - INFO - [X] Filtered out Central Italian Eatery - missing required amenities: ['outdoor seating']
+2026-02-08 15:17:57,931 - src.rag_system - INFO - [FALLBACK] Found 0 results with relaxed location constraint
+2026-02-08 15:17:58,538 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-02-08 15:17:58,547 - src.rag_system - INFO - [FILTER] Applying filters with entities: {'cuisine': 'Italian'}
+2026-02-08 15:17:58,548 - src.agents - INFO - Retrieved 3 restaurants (fallback: True)
+2026-02-08 15:17:58,550 - src.agents - INFO - Generating response for 3 restaurants (fallback: True)
+2026-02-08 15:18:03,248 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"

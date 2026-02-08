@@ -1,0 +1,34 @@
+2025-11-26 13:52:09 | llm_call             | query_understanding/gpt-4o-mini |  3352.32ms | status=success | prompt_tokens=189 | completion_tokens=64 | total_tokens=253
+2025-11-26 13:52:09 | entity_extraction    | query_understanding       |  3352.32ms | status=success | num_entities=2
+2025-11-26 13:52:11 | retrieval            | hybrid                    |  1214.59ms | status=success | num_documents=17
+2025-11-26 13:52:17 | llm_call             | response_generation/gpt-4o-mini |  6600.06ms | status=success | prompt_tokens=439 | completion_tokens=371 | total_tokens=810
+2025-11-26 14:29:19 | llm_call             | query_understanding/gpt-4o-mini |  3554.56ms | status=success | prompt_tokens=189 | completion_tokens=64 | total_tokens=253
+2025-11-26 14:29:19 | entity_extraction    | query_understanding       |  3562.63ms | status=success | num_entities=2
+2025-11-26 14:29:22 | retrieval            | hybrid                    |  2460.14ms | status=success | num_documents=17
+2025-11-26 14:29:28 | llm_call             | response_generation/gpt-4o-mini |  5945.19ms | status=success | prompt_tokens=439 | completion_tokens=333 | total_tokens=772
+2026-02-08 14:09:38 | llm_call             | query_understanding/gpt-4o-mini |  3732.52ms | status=error | prompt_tokens=0 | completion_tokens=0
+2026-02-08 14:09:38 | entity_extraction    | query_understanding       |  3734.25ms | status=fallback | num_entities=0
+2026-02-08 14:09:38 | retrieval            | hybrid                    |     0.09ms | status=error | num_documents=0
+2026-02-08 14:16:08 | llm_call             | query_understanding/gpt-4o-mini |  1533.20ms | status=success | prompt_tokens=196 | completion_tokens=81 | total_tokens=277
+2026-02-08 14:16:08 | llm_call             | query_understanding/gpt-4o-mini |  1534.84ms | status=error | prompt_tokens=0 | completion_tokens=0
+2026-02-08 14:16:08 | entity_extraction    | query_understanding       |  1535.19ms | status=fallback | num_entities=0
+2026-02-08 14:16:08 | retrieval            | hybrid                    |     0.04ms | status=error | num_documents=0
+2026-02-08 14:16:12 | llm_call             | response_generation/gpt-4o-mini |  3706.02ms | status=success | prompt_tokens=193 | completion_tokens=315 | total_tokens=508
+2026-02-08 14:20:30 | llm_call             | query_understanding/gpt-4o-mini |  1290.16ms | status=success | prompt_tokens=196 | completion_tokens=81 | total_tokens=277
+2026-02-08 14:20:30 | entity_extraction    | query_understanding       |  1291.20ms | status=success | num_entities=5
+2026-02-08 14:20:48 | retrieval            | hybrid                    | 17961.83ms | status=success | num_documents=12
+2026-02-08 14:20:49 | retrieval            | hybrid                    |  1162.10ms | status=success | num_documents=10
+2026-02-08 14:20:50 | retrieval            | hybrid                    |  1345.08ms | status=success | num_documents=10
+2026-02-08 14:20:55 | llm_call             | response_generation/gpt-4o-mini |  3997.36ms | status=success | prompt_tokens=623 | completion_tokens=380 | total_tokens=1003
+2026-02-08 14:38:22 | llm_call             | query_understanding/gpt-4o-mini |  1450.42ms | status=success | prompt_tokens=196 | completion_tokens=81 | total_tokens=277
+2026-02-08 14:38:22 | entity_extraction    | query_understanding       |  1452.26ms | status=success | num_entities=5
+2026-02-08 14:38:23 | retrieval            | hybrid                    |  1046.07ms | status=success | num_documents=12
+2026-02-08 14:38:23 | retrieval            | hybrid                    |   397.41ms | status=success | num_documents=10
+2026-02-08 14:38:25 | retrieval            | hybrid                    |  1283.83ms | status=success | num_documents=10
+2026-02-08 14:38:29 | llm_call             | response_generation/gpt-4o-mini |  4706.18ms | status=success | prompt_tokens=623 | completion_tokens=403 | total_tokens=1026
+2026-02-08 15:17:55 | llm_call             | query_understanding/gpt-4o-mini |  1792.33ms | status=success | prompt_tokens=196 | completion_tokens=81 | total_tokens=277
+2026-02-08 15:17:55 | entity_extraction    | query_understanding       |  1793.72ms | status=success | num_entities=5
+2026-02-08 15:17:56 | retrieval            | hybrid                    |  1482.38ms | status=success | num_documents=12
+2026-02-08 15:17:57 | retrieval            | hybrid                    |   948.12ms | status=success | num_documents=10
+2026-02-08 15:17:58 | retrieval            | hybrid                    |   614.09ms | status=success | num_documents=10
+2026-02-08 15:18:03 | llm_call             | response_generation/gpt-4o-mini |  4703.79ms | status=success | prompt_tokens=799 | completion_tokens=476 | total_tokens=1275
